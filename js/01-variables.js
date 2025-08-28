@@ -19,3 +19,6 @@ document.writeln("<h1 class='tex-blue'>hola mundo</h1>");
 // ventanas emergentes
 
 // alert("practica de alert");
+
+// variables var-let-const
+
