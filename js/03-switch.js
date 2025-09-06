@@ -26,13 +26,14 @@ else if(opcion===4){
     document.writeln('Ingresaste una opcion erronea')
 } */
 
-
 const opcion = parseInt(
   prompt(
     "Ingrese un numero de la semana: 1-Lunes, 2-Martes, 3-Miercoles, 4-Jueves, 5-Viernes, 6-Sabado, 7-Domingo"
   )
 );
 switch (opcion) {
+  case "1":
+  case "L":
   case 1:
     document.writeln("Lunes🙃");
     break;
