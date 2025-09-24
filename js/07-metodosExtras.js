@@ -38,10 +38,26 @@ do {
       } else {
         mostrarMensaje("No encontraste la pelicula seleccionada 🙃");
       }
+      break;
 
-      break;
     case 2:
+      const peli = prompt("Ingrese la,pelicula que quieres buscar");
+      const peliculasFiltradas = peliculas.filter((pelicula) =>
+        pelicula.toLowerCase().includes(peli.toLowerCase())
+      );
+      console.log(peliculas[0].toLowerCase().includes(peli.toLowerCase()));
+      console.log(peliculas[2].toLowerCase().includes(peli.toLowerCase()));
+
+      if (peliculasFiltradas.length !== 0) {
+        mostrarMensaje("Peliculas Filtradas:");
+        peliculasFiltradas.forEach((itemPelicula) =>
+          mostrarMensaje(itemPelicula)
+        );
+      } else {
+        mostrarMensaje("No se encontraron los terminos de las busqueda");
+      }
       break;
+
     case 3:
       mostrarMensaje("<p>Mostrar todos los elementos del array</p>");
       peliculas.forEach((itemPelicula) => mostrarMensaje(itemPelicula));
