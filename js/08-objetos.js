@@ -47,8 +47,8 @@ const funko = {
     document.writeln(`<p>El nuevo precio se: ${nuevoPrecio}</p>`);
   },
 
-  mostrarEstado: () => {
-    document.writeln(`<p>Mostrar si el funko esta habilitado o no</p>`);
+  mostrarTitulo: () => {
+    document.writeln(`<h1>FUNKO</h1>`);
   },
 };
 
@@ -80,3 +80,4 @@ document.writeln(`<p>Tienda: ${funko.tienda}</p>`);
 funko.mostrarDatos()
 funko.actualizarPrecio(100)
 funko.mostrarDatos()
+funko.mostrarTitulo()
