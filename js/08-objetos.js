@@ -30,18 +30,54 @@ const funko = {
 
   //metodos
   mostrarDatos: function () {
-    document.writeln(`<p>Mostrar todos los datos del objeto</p>`);
+    console.log(this)
+    document.writeln(`<p><b>Funko: ${this.nombre}</b></p>`);
+    document.writeln(`<ul>
+<li>Codigo: ${this.codigo}</li>
+<li>Precio: ${this.precio}</li>
+<li>Marca: ${this.marca}</li>
+<li>Estado: ${this.estado}</li>
+    </ul>`);
   },
 
-  actualizarPrecio: (nuevoPrecio) => {
-    document.writeln(`<p>Agregar el codigo para actualizar el precio</p>`);
+  actualizarPrecio: function (nuevoPrecio){
+    console.log (this)
+    console.log(this.precio)
+    this.precio=nuevoPrecio
+    document.writeln(`<p>El nuevo precio se: ${nuevoPrecio}</p>`);
   },
 
-  mostrarEstado: () => {
-    document.writeln(`<p>Mostrar si el funko esta habilitado o no</p>`);
+  mostrarTitulo: () => {
+    document.writeln(`<h1>FUNKO</h1>`);
   },
 };
 
 // mostrar un objeto
 console.log(funko);
 document.writeln(funko);
+//mostrar las propiedades de un objeto
+document.writeln(`<p>Codigo: ${funko.codigo}</p>`);
+document.writeln(`<p>Codigo: ${funko.nombre}</p>`);
+document.writeln(`<p>Precio: $ ${funko["precio"]}</p>`);
+document.writeln(`<p>Tamaño: ${funko.tamanio}</p>`);
+document.writeln(`<p>Marca: ${funko.marca}</p>`);
+//modificar la propiedad de un objeto
+funko.marca = "Exclusive Funko";
+document.writeln(`<p>Marca: ${funko.marca}</p>`);
+//agregar propiedades nuevas o metodos nuevos al objeto
+funko.tamanio = "Regular";
+document.writeln(`<p>Tamaño: ${funko.tamanio}</p>`);
+
+console.log(funko);
+
+funko.tienda = "No definido";
+document.writeln(`<p>Tienda=${funko.tienda}</p>`);
+//borrar la propiedad del objeto
+delete funko.tienda;
+document.writeln(`<p>Tienda: ${funko.tienda}</p>`);
+
+//usar metodos del objeto
+funko.mostrarDatos()
+funko.actualizarPrecio(100)
+funko.mostrarDatos()
+funko.mostrarTitulo()
