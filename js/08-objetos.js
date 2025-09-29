@@ -81,3 +81,5 @@ funko.mostrarDatos()
 funko.actualizarPrecio(100)
 funko.mostrarDatos()
 funko.mostrarTitulo()
+
+console.log(this) //representa la ventana en este navegador
