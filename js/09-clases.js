@@ -24,10 +24,20 @@ class Usuario {
     return this.#email;
   }
 
+  get getPassword() {
+    return this.#password;
+  }
+
   set email(nuevoEmail) {
     //si existe el nuevo email
     if (nuevoEmail) {
       this.#email = nuevoEmail;
+    }
+  }
+
+  set setPassword(nuevoPassword) {
+    if (nuevoPassword.length > 0) {
+      this.#password = nuevoPassword;
     }
   }
 
@@ -71,3 +81,10 @@ document.writeln(`<p>Email de Marcos: ${marcos.email}</p>`);
 marcos.email = "marcosmolina@mail.com";
 console.log(marcos);
 marcos.mostrarDatos();
+
+// Muestro el password de Valentina con get
+document.writeln(`<p>Password de Valentina: ${Valentina.getPassword}</p>`);
+
+//Cambio el password de Valentina con set
+Valentina.setPassword = prompt("Ingresa un nuevo password");
+document.writeln(`<p>El nuevo password es: ${Valentina.getPassword}</p>`);
