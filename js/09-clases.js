@@ -170,3 +170,19 @@ document.writeln(`<p>Rollincoins de ${lisandro.nombre}: ${lisandro.rollingCoins}
 
 lisandro.otorgarRollincoins(3)
 document.writeln(`<p>Rollincoins de ${lisandro.nombre}: ${lisandro.rollingCoins}</p>`)
+
+/*
+//polimorfismo
+  mostrarDatos() {
+    document.writeln(`<h3>Alumnos 👨‍💻👩‍💻</h3>`);
+    document.writeln(`<ul>
+            <li>Nombre y apellido: ${(this.nombre, this.apellido)} </li>
+            <li>Email: ${this.email} </li>
+            <li>Edad: ${this.edad} </li>
+            <li>DNI: ${this.dni} </li>
+            <li>Curso: ${this.curso} </li>
+            <li>Módulo: ${this.modulos} </li>
+            <li>RollingCoins: ${this.rollingCoins} 💵</li>
+            </ul>`);
+  }
+*/
